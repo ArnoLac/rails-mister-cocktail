@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="under_nav">
+
+    <h1><%= @cocktail.name %></h1>
+    <a href="/cocktails/<%= @cocktail.id %>/doses/new" class=""> Add ingredient </a> </p>
+    <p> Ingredients: </p>
+    <% @cocktail.doses.each do |dose| %>
+      <div class="row">
+        <p><%="#{dose.ingredient.name} : #{dose.description}" %></p>
+        <%= link_to "Delete",  dose_path(dose), method: :delete, data: {confirm: "Are you sure ?"} %>
+      </div>
+    <% end %>
+
+  </div>
+</div>

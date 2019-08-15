@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="under_nav">
+
+
+    <div class="row">
+
+      <% @cocktails.each do |cocktail| %>
+
+        <div class="card-cocktail col-3">
+          <img src=<%= cocktail.url %>>
+          <div class="card-cocktail-infos">
+            <div>
+              <h2> <a href="/cocktails/<%= cocktail.id %>" class="deco_none"> <%= cocktail.name %> </a></h2>
+              <p> Ingredients: <% cocktail.doses.each do |dose| %>
+                <%="#{dose.ingredient.name} : #{dose.description}" %>
+                <% end %></p>
+              <p> <a href="/cocktails/<%= cocktail.id %>/doses/new" class=""> Add ingredient </a> </p>
+              </div>
+          </div>
+        </div>
+
+      <% end %>
+    </div>
+
+  </div>
+</div>

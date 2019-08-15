@@ -1,0 +1,18 @@
+.nav_button {
+  font-size: 15px;
+  text-decoration: none;
+  border: 1px solid rgb(123, 181, 255);
+  border-radius: 30px;
+  padding: 10px 20px;
+  color: rgba(123, 181, 255, 0.8);
+}
+
+.nav_button:hover {
+  text-decoration: none;
+  border: 1px solid rgb(59, 145, 255);
+  color: rgb(59, 145, 255);
+}
+
+.deco_none {
+  text-decoration: none;
+}
