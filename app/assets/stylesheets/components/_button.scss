@@ -1,18 +1,31 @@
-.nav_button {
+.main_button {
   font-size: 15px;
   text-decoration: none;
-  border: 1px solid rgb(123, 181, 255);
+  border: 1px solid rgb(78, 150, 241);
   border-radius: 30px;
   padding: 10px 20px;
-  color: rgba(123, 181, 255, 0.8);
+  color: rgba(78, 150, 241, 0.8);
 }
 
-.nav_button:hover {
+.main_button:hover {
   text-decoration: none;
-  border: 1px solid rgb(59, 145, 255);
-  color: rgb(59, 145, 255);
+  font-weight: bolder;
+  padding: 10px 15px;
+  border: 1px solid rgb(44, 134, 247);
+  color: rgb(44, 134, 247);
 }
 
 .deco_none {
   text-decoration: none;
+}
+
+.main_button.full {
+  background-color: rgba(78, 150, 241, 0.8);
+  color: white;
+  border: none;
+}
+
+.main_button.full:hover {
+  border: 1px solid rgb(44, 134, 247);
+  border: none;
 }

@@ -17,7 +17,6 @@
             <p><strong>Dose</strong></p>
           </div>
           <div class="col-2">
-            <p><strong>Delete</strong></p>
           </div>
         </div>
 
@@ -30,13 +29,13 @@
             <p><%="#{dose.description}" %></p>
           </div>
           <div class="col-2">
-            <%= link_to "Delete",  dose_path(dose), method: :delete, data: {confirm: "Are you sure ?"} %>
+            <%= link_to '<i class="far fa-trash-alt"></i>'.html_safe, dose_path(dose), method: :delete, data: {confirm: "Are you sure ?"} %>
           </div>
         </div>
         <% end %>
 
         <div class="row add-ingredient">
-            <a href="/cocktails/<%= @cocktail.id %>/doses/new" class="btn btn-primary"> Add ingredient </a>
+            <a href="/cocktails/<%= @cocktail.id %>/doses/new" class="main_button full"> Add ingredient </a>
         </div>
       </div>
 
