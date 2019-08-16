@@ -2,22 +2,13 @@
   <div class="under_nav">
 
 
-    <div class="row">
+    <div class="row cocktails-row">
 
       <% @cocktails.each do |cocktail| %>
         <div class="card-cocktail col-3"
           style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cocktail.url %>')">
           <a href="/cocktails/<%= cocktail.id %>" class="deco_none"> <%= cocktail.name %> </a>
         </div>
-
-        <!-- <div class="card-cocktail col-3">
-          <div class="card-cocktail-image">
-            <img src=<%= cocktail.url %>>
-          </div>
-          <div class="card-cocktail-title">
-            <a href="/cocktails/<%= cocktail.id %>" class="deco_none"> <%= cocktail.name %> </a>
-          </div>
-        </div> -->
 
       <% end %>
     </div>
