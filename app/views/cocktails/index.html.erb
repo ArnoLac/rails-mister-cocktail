@@ -6,7 +6,7 @@
 
       <% @cocktails.each do |cocktail| %>
         <div class="card-cocktail col-3"
-          style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cocktail.url %>')">
+          style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cocktail.photo %>')">
           <a href="/cocktails/<%= cocktail.id %>" class="deco_none"> <%= cocktail.name %> </a>
         </div>
 
