@@ -4,8 +4,8 @@
 
     <%= simple_form_for [@cocktail, @dose] do |f| %>
       <%= f.input :description, label: 'Dose' %>
-      <%= f.association :ingredient, as: :radio_buttons%>
-      <%= f.button :submit %>
+      <%= f.association :ingredient%>
+      <%= f.button :submit, class: "btn-primary" %>
     <% end %>
   </div>
 

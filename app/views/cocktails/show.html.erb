@@ -1,15 +1,52 @@
 <div class="container">
+
   <div class="under_nav">
 
-    <h1><%= @cocktail.name %></h1>
-    <a href="/cocktails/<%= @cocktail.id %>/doses/new" class=""> Add ingredient </a> </p>
-    <p> Ingredients: </p>
-    <% @cocktail.doses.each do |dose| %>
-      <div class="row">
-        <p><%="#{dose.ingredient.name} : #{dose.description}" %></p>
-        <%= link_to "Delete",  dose_path(dose), method: :delete, data: {confirm: "Are you sure ?"} %>
+    <div class="row title-row">
+      <h1><%= @cocktail.name %></h1>
+    </div>
+
+    <div class="row">
+      <div class="col-8 navigation-menu">
+
+        <div class="row ingredient-table">
+          <div class="col-6">
+            <p><strong>Ingredient</strong></p>
+          </div>
+          <div class="col-4">
+            <p><strong>Dose</strong></p>
+          </div>
+          <div class="col-2">
+            <p><strong>Delete</strong></p>
+          </div>
+        </div>
+
+        <% @cocktail.doses.each do |dose| %>
+        <div class="row">
+          <div class="col-6">
+            <p><%= "#{dose.ingredient.name}" %></p>
+          </div>
+          <div class="col-4">
+            <p><%="#{dose.description}" %></p>
+          </div>
+          <div class="col-2">
+            <%= link_to "Delete",  dose_path(dose), method: :delete, data: {confirm: "Are you sure ?"} %>
+          </div>
+        </div>
+        <% end %>
+
+        <div class="row add-ingredient">
+            <a href="/cocktails/<%= @cocktail.id %>/doses/new" class="btn btn-primary"> Add ingredient </a>
+        </div>
       </div>
-    <% end %>
+
+      <div class="col-4 main-content">
+        <img src="<%= @cocktail.url %>" alt="<%= @cocktail.name %>">
+      </div>
+
+    </div>
+
+
 
   </div>
 </div>
